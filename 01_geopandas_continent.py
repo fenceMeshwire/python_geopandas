@@ -36,5 +36,5 @@ north_america.plot(
 ax.set_xticks([])
 ax.set_yticks([])
 
-plt.title("Map of North America with GeoPandas")
+plt.title("Continent and countries of North America")
 plt.savefig("01_continent.png", dpi=300)
