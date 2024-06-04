@@ -21,6 +21,9 @@ world.head()
 # Drop "Antarctica and "Seven Seas" from the DataFrame:
 drop_idxs = world["continent"].isin(["Antarctica", "Seven seas (open ocean)"])
 world = world.drop(world[drop_idxs].index)
+# Drop "Greenland" from the DataFrame
+greenland_idx = world.loc[world['name'] == 'Greenland']
+world = world.drop(greenland_idx.index)
 
 def fix_missing_codes(world):
     # Replace country codes with the value of "-99": 
